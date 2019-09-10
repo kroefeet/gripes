@@ -1,0 +1,17 @@
+{
+  "name": "mernstarter",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "bash ./client/build.sh",
+    "start": "node server.js"
+  },
+  "cacheDirectories": ["client/node_modules", "node_modules"],
+  "dependencies": {
+    "express": "4.16.3",
+    "mongodb": "3.1.1",
+    "nodemon": "1.18.7"
+  }
+}
