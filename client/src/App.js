@@ -11,12 +11,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="App-logo">logo placeholder</div>
         <nav className="App-navigation">
-          <h1 className="App-title">MEHRRRRN</h1>
-          <Link to="/">Welcome</Link>
-          <Link to="/blog/">Blog</Link>
-          <Link to="/write/">Write Article</Link>
+          <h1 className="App-title">Gripes</h1>
         </nav>
+
+        <div className="App-sideMenu">
+            <p> This is the sideMenu component</p>
+            <Link to="/blog/">Light Gripes</Link>
+            <Link to="/blog/">Heavy Gripes</Link>
+            <Link to="/">About</Link>
+            <Link to="/write/">Got a gripe?</Link>
+        </div>
 
         <div className="App-mainContent">
           <Switch>

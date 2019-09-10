@@ -41,7 +41,7 @@ class Blog extends Component {
   voteArticle(article) {
     let newVoteCount = article.voteCount;
 
-    // Increase the vote count 
+    // Increase the vote count
     if (!newVoteCount) {
       newVoteCount = 1;
     } else {
@@ -71,7 +71,7 @@ class Blog extends Component {
   render() {
     return (
       <div className="Blog">
-        <h1>Blog</h1>
+        <h1>This section could display an individual gripe</h1>
         {
           this.state.blogPosts.map((post, index) => (
             <div className="Blog-article" key={post._id}>
@@ -96,4 +96,3 @@ class Blog extends Component {
 }
 
 export default Blog;
-

@@ -1,5 +1,5 @@
 .App {
-    background: linear-gradient(to top, #998877, #333399);
+    background: linear-gradient(to top, #fff, #000);
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr minmax(auto, 800px) 1fr;
@@ -12,6 +12,7 @@
 .App-navigation {
     padding: 10px;
     color: white;
+    background: blue;
 }
 
 .App-sidebar {
@@ -35,7 +36,7 @@
 .App-navigation {
     grid-column: 2 / span 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
 }
@@ -50,4 +51,19 @@
 
 .App-mainContent {
     grid-column: 2;
+}
+
+.App-sideMenu {
+    grid-column: 1;
+    grid-row: 2;
+    color: white;
+    background: linear-gradient(to top, black, orange);
+    display: flex;
+    flex-direction: column;
+}
+
+.App-logo {
+    grid-column: 1;
+    grid-row: 1;
+    background: green;
 }

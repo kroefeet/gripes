@@ -8,11 +8,10 @@ class LandingPage extends Component {
       <div className="LandingPage">
         <header className="LandingPage-header">
           <p>
-            Kickstart Coding - Frontend React<br />
-            MERRRRRRN Starter Project
+            This is the already created<br />
+            LandingPage component
           </p>
-          <Link to="/blog/">Blog</Link>
-          <Link to="/write/">Write article</Link>
+          <p>I was thinking that it could be that basis of the About page</p>
         </header>
       </div>
     );

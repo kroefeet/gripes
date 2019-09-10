@@ -43,10 +43,10 @@ class WriteArticle extends Component {
   render() {
     return (
       <div className="WriteArticle">
-        <h1>Write an article</h1>
+        <h1>Add your gripe here</h1>
         <input
-            name="title"
-            placeholder="Title"
+            name="category"
+            placeholder="Light or Heavy"
             value={this.state.title}
             onChange={this.onChangeTitle}
           />
@@ -61,7 +61,7 @@ class WriteArticle extends Component {
 
         <br />
 
-        <button onClick={this.submit}>Add to blog</button>
+        <button onClick={this.submit}>Add to the gripe pile</button>
       </div>
 
     );
