@@ -5,7 +5,7 @@ import './App.css';
 
 import LandingPage from './components/pages/LandingPage/LandingPage.js';
 import Blog from './components/pages/Blog/Blog.js';
-import WriteArticle from './components/pages/WriteArticle/WriteArticle.js';
+import SubmitGripe from './components/pages/SubmitGripe/SubmitGripe.js';
 
 class App extends Component {
   render() {
@@ -21,14 +21,14 @@ class App extends Component {
             <Link to="/blog/">Light Gripes</Link>
             <Link to="/blog/">Heavy Gripes</Link>
             <Link to="/">About</Link>
-            <Link to="/write/">Got a gripe?</Link>
+            <Link to="/add-gripe/">Got a gripe?</Link>
         </div>
 
         <div className="App-mainContent">
           <Switch>
             <Route exact path='/' component={LandingPage} />
             <Route exact path='/blog/' component={Blog} />
-            <Route exact path='/write/' component={WriteArticle} />
+            <Route exact path='/add-gripe/' component={SubmitGripe} />
           </Switch>
         </div>
 
