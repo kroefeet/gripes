@@ -25,7 +25,7 @@ class SubmitGripe extends Component {
       gripeText: this.state.gripeText,
     };
 
-    fetch('/api/mongodb/gripePile/', {
+    fetch('/api/mongodb/gripes.gripePile/', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(formData),

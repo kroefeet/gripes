@@ -4,7 +4,7 @@ import { Link, Switch, Route } from 'react-router-dom'
 import './App.css';
 
 import LandingPage from './components/pages/LandingPage/LandingPage.js';
-import Blog from './components/pages/Blog/Blog.js';
+import Gripes from './components/pages/Gripes/Gripes.js';
 import SubmitGripe from './components/pages/SubmitGripe/SubmitGripe.js';
 
 class App extends Component {
@@ -18,8 +18,8 @@ class App extends Component {
 
         <div className="App-sideMenu">
             <p> This is the sideMenu component</p>
-            <Link to="/blog/">Light Gripes</Link>
-            <Link to="/blog/">Heavy Gripes</Link>
+            <Link to="/gripe/">Light Gripes</Link>
+            <Link to="/gripe/">Heavy Gripes</Link>
             <Link to="/">About</Link>
             <Link to="/add-gripe/">Got a gripe?</Link>
         </div>
@@ -27,7 +27,7 @@ class App extends Component {
         <div className="App-mainContent">
           <Switch>
             <Route exact path='/' component={LandingPage} />
-            <Route exact path='/blog/' component={Blog} />
+            <Route exact path='/gripe/' component={Gripes} />
             <Route exact path='/add-gripe/' component={SubmitGripe} />
           </Switch>
         </div>

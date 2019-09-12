@@ -148,15 +148,14 @@ if (!process.env.MONGODB_URI) {
   process.exit(1);
 }
 const MONGODB_URL = process.env.MONGODB_URI;
-const splitUrl = MONGODB_URL.split('/');
-const mongoDbDatabaseName = splitUrl[splitUrl.length - 1];
+const MONGODB_DATABASE = 'gripes';
 
 let db;
 // First connect to MongoDB, then start HTTP server
 MongoClient.connect(MONGODB_URL, {useNewUrlParser: true}, (err, client) => {
   if (err) throw err;
   console.log("--MongoDB connection successful");
-  db = client.db(mongoDbDatabaseName);
+  db = client.db(MONGODB_DATABASE);
 
   // Start the server
   const PORT = process.env.PORT || 8080;
