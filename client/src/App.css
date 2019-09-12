@@ -2,7 +2,7 @@
     background: linear-gradient(to top, #fff, #000);
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 800px) 1fr;
+    grid-template-columns: minmax(100px, 200px) 1fr minmax(100px, 200px);
     grid-template-rows: 100px auto;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
