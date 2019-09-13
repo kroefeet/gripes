@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './HeavyGripe.css';
 
-
+// TODO: checkbox for light/heavy gripes on WriteArticle
+//      - Try one gripe w/ light/heavy variables
+//        - From API, filter Light and Heavy gripes
+//        - then randomize each category when displaying on app
 class HeavyGripe extends Component {
   state = {
     HeavyGripePosts: [],
