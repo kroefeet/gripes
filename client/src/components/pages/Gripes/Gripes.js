@@ -1,60 +1,55 @@
 import React, { Component } from 'react';
-import './Blog.css';
+import './Gripes.css';
 
 
-class Blog extends Component {
+class Gripes extends Component {
   state = {
-    blogPosts: [],
+    gripePile: [],
   }
 
   componentDidMount() {
-    this.fetchPosts();
+    this.fetchGripes();
   }
 
-  fetchPosts() {
+  fetchGripes() {
     console.log('Fetching data from API');
-    fetch('/api/mongodb/blogposts/')
+    fetch('/api/mongodb/gripePile/')
       .then(response => response.json())
       .then(data => {
         console.log('Got data back', data);
         this.setState({
-          blogPosts: data,
+          gripePile: data,
         });
       });
   }
-
-  deleteArticle(documentId) {
+/*
+  deleteGripe(documentId) {
     console.log('Sending DELETE for', documentId);
     // Do the DELETE, using "?_id=" to specify which document we are deleting
-    fetch('/api/mongodb/blogposts/?_id=' + documentId, {
+    fetch('/api/mongodb/gripes/?_id=' + documentId, {
         method: 'DELETE',
       })
       .then(response => response.json())
       .then(data => {
         console.log('Got this back', data);
-
         // Call method to refresh data
-        this.fetchPosts();
+        this.fetchGripes();
       });
   }
-
   voteArticle(article) {
     let newVoteCount = article.voteCount;
-
     // Increase the vote count
     if (!newVoteCount) {
       newVoteCount = 1;
     } else {
       newVoteCount++;
     }
-
     const formData = {
       voteCount: newVoteCount,
     };
-
     // Do the PUT, using "?_id=" to specify which document we are affecting
     const documentId = article._id;
-    fetch('/api/mongodb/blogposts/?_id=' + documentId, {
+    fetch('/api/mongodb/gripePile/?_id=' + documentId, {
         method: 'PUT',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(formData),
@@ -62,29 +57,27 @@ class Blog extends Component {
       .then(response => response.json())
       .then(data => {
         console.log('Got this back', data);
-
         // Call method to refresh data
-        this.fetchPosts();
+        this.fetchGripes();
       });
   }
-
+*/
   render() {
     return (
-      <div className="Blog">
+      <div className="Gripes">
         <h1>This section could display an individual gripe</h1>
         {
-          this.state.blogPosts.map((post, index) => (
-            <div className="Blog-article" key={post._id}>
+          this.state.gripePile.map((gripe, index) => (
+            <div className="Gripes-article" key={gripe._id}>
 
-              <h1>{post.title}</h1>
-              <p>{post.text}</p>
+              <p>{gripe.gripeText}</p>
 
-              <div className="Blog-articleActions">
-                <div onClick={() => this.deleteArticle(post._id)}>
+              <div className="Gripes-articleActions">
+                <div onClick={() => this.deleteArticle(gripe._id)}>
                   <span alt="delete this">🗑</span>
                 </div>
-                <div onClick={() => this.voteArticle(post)}>
-                  <span alt="upvote this">⬆ {post.voteCount}</span>
+                <div onClick={() => this.voteArticle(gripe)}>
+                  <span alt="upvote this">⬆ {gripe.voteCount}</span>
                 </div>
               </div>
             </div>
@@ -95,4 +88,4 @@ class Blog extends Component {
   }
 }
 
-export default Blog;
+export default Gripes;
