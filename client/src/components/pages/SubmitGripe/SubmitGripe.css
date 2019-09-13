@@ -1,16 +1,35 @@
-.SubmitGripe input,
-.SubmitGripe textarea,
-.SubmitGripe button {
+.SubmitGripe textarea {
   font-size: 24pt;
-  background: none;
-  color: white;
   padding: 10px;
+  margin: 5px;
   width: 100%;
-  display: block;
-  border: 2px solid white;
+  border: 2px solid #ed6a5e;
 }
 
-.SubmitGripe button {
-  color: black;
-  background: #61dafb;
+.SubmitGripe--button {
+  color: #f7ebe8;
+  background: #ed6a5e;
+  text-align: center;
+  font-size: 24pt;
+  padding: 10px;
+  margin: 5px;
+  width: 100%;
+
+}
+
+
+.SubmitGripe--inputs {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    color: #ffa987;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+
+}
+
+.SubmitGripe--inputs label {
+    width: auto;
+
 }
