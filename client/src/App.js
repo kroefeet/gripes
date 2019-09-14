@@ -55,8 +55,10 @@ class App extends Component {
 
         <div className="App-sideMenu">
             <p> This is the sideMenu component</p>
-            <Link to="/gripe/">Light Gripes</Link>
-            <Link to="/gripe/">Heavy Gripes</Link>
+            <Link to="/gripe/Light/">Light Gripes</Link>
+            <Link to="/gripe/Heavy/">Heavy Gripes</Link>
+            {/* <Link to="/gripe/">Heavy Gripes</Link>
+            <Link to="/gripe/">Light Gripes</Link> */}
             <Link to="/">About</Link>
             <Link to="/add-gripe/">Got a gripe?</Link>
         </div>
@@ -64,7 +66,9 @@ class App extends Component {
         <div className="App-mainContent">
           <Switch>
             <Route exact path='/' component={LandingPage} />
-            <Route exact path='/gripe/' component={Gripes} />
+            <Route exact path='/gripe/Light/' component={LightGripe} />
+            <Route exact path='/gripe/Heavy/' component={HeavyGripe} />
+            {/* <Route exact path='/gripe/' component={Gripes} /> */}
             <Route exact path='/add-gripe/' component={SubmitGripe} />
           </Switch>
         </div>
