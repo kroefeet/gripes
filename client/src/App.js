@@ -6,6 +6,7 @@ import './App.css';
 import LandingPage from './components/pages/LandingPage/LandingPage.js';
 import Blog from './components/pages/Blog/Blog.js';
 import WriteArticle from './components/pages/WriteArticle/WriteArticle.js';
+import SideMenu from './components/nav/SideMenu/SideMenu.js';
 
 class App extends Component {
   render() {
@@ -17,11 +18,7 @@ class App extends Component {
         </nav>
 
         <div className="App-sideMenu">
-            <p> This is the sideMenu component</p>
-            <Link to="/blog/">Light Gripes</Link>
-            <Link to="/blog/">Heavy Gripes</Link>
-            <Link to="/">About</Link>
-            <Link to="/write/">Got a gripe?</Link>
+        <SideMenu />
         </div>
 
         <div className="App-mainContent">

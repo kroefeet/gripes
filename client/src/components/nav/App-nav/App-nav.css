@@ -1,0 +1,13 @@
+.App-navigation {
+    grid-column: 2 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.App-navigation {
+    padding: 10px;
+    color: white;
+    background: blue;
+}
