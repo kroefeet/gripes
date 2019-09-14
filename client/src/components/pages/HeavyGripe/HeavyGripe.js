@@ -7,87 +7,56 @@ import './HeavyGripe.css';
 //        - then randomize each category when displaying on app
 class HeavyGripe extends Component {
   state = {
-    HeavyGripePosts: [],
+    gripePile: [
+      {
+        gripeLevel: "",
+      },
+    ],
   }
 
   componentDidMount() {
-    this.fetchPosts();
+    this.fetchHeavyGripes();
   }
 
-  fetchPosts() {
-    console.log('Fetching data from API');
-    fetch('/api/mongodb/HeavyGripeposts/')
-      .then(response => response.json())
-      .then(data => {
-        console.log('Got data back', data);
-        this.setState({
-          HeavyGripePosts: data,
-        });
+  fetchHeavyGripes() {
+    fetch('/api/mongodb/gripePile/')
+    .then(response => response.json())
+    .then(data => {
+      console.log('Did component mount?', data);
+      // make a newList
+      // push the items in the newList
+      let newList = [];
+      for (let item of data) {
+        if (
+          item.gripeLevel === 2) {
+            newList.push(item);
+        }
+      }
+// make newList become gripePile
+      this.setState({
+        gripePile: newList,
       });
+      console.log('Heavy gripes only', this.state.gripePile);
+    });
   }
 
-  deleteArticle(documentId) {
-    console.log('Sending DELETE for', documentId);
-    // Do the DELETE, using "?_id=" to specify which document we are deleting
-    fetch('/api/mongodb/HeavyGripeposts/?_id=' + documentId, {
-        method: 'DELETE',
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Got this back', data);
-
-        // Call method to refresh data
-        this.fetchPosts();
-      });
-  }
-
-  voteArticle(article) {
-    let newVoteCount = article.voteCount;
-
-    // Increase the vote count
-    if (!newVoteCount) {
-      newVoteCount = 1;
-    } else {
-      newVoteCount++;
-    }
-
-    const formData = {
-      voteCount: newVoteCount,
-    };
-
-    // Do the PUT, using "?_id=" to specify which document we are affecting
-    const documentId = article._id;
-    fetch('/api/mongodb/HeavyGripeposts/?_id=' + documentId, {
-        method: 'PUT',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(formData),
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Got this back', data);
-
-        // Call method to refresh data
-        this.fetchPosts();
-      });
-  }
 
   render() {
     return (
-      <div className="HeavyGripe">
-        <h1>Heavy Sour-puss gripes go in here....</h1>
+      <div className="Gripes">
+        <h1>This section could display an individual gripe</h1>
         {
-          this.state.HeavyGripePosts.map((post, index) => (
-            <div className="HeavyGripe-article" key={post._id}>
+          this.state.gripePile.map((gripe, index) => (
+            <div className="Gripes-article" key={gripe._id}>
 
-              <h1>{post.title}</h1>
-              <p>{post.text}</p>
+              <p>{gripe.gripeText}</p>
 
-              <div className="HeavyGripe-articleActions">
-                <div onClick={() => this.deleteArticle(post._id)}>
+              <div className="Gripes-articleActions">
+                <div onClick={() => this.deleteArticle(gripe._id)}>
                   <span alt="delete this">🗑</span>
                 </div>
-                <div onClick={() => this.voteArticle(post)}>
-                  <span alt="upvote this">⬆ {post.voteCount}</span>
+                <div onClick={() => this.voteArticle(gripe)}>
+                  <span alt="upvote this">⬆ {gripe.voteCount}</span>
                 </div>
               </div>
             </div>
