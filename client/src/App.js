@@ -7,7 +7,44 @@ import LandingPage from './components/pages/LandingPage/LandingPage.js';
 import Gripes from './components/pages/Gripes/Gripes.js';
 import SubmitGripe from './components/pages/SubmitGripe/SubmitGripe.js';
 
+// TODO:  -create condition to filter Light vs Heavy to <Link>
+//        -have only one, random, gripe to display on page.
+
+// Light Gripes are Lvl 1
+// Heavy Gripes are Lvl 2
+
 class App extends Component {
+
+  // state = {
+  //   gripePile: [
+  //     {
+  //       gripeLevel: "",
+  //     },
+  //   ],
+  // }
+
+//   fetchHeavyGripes() {
+//     fetch('/api/mongodb/gripePile/')
+//     .then(response => response.json())
+//     .then(data => {
+//       console.log('Did component mount?', data);
+//       // make a newList
+//       // push the items in the newList
+//       let newList = [];
+//       for (let item of data.gripePile) {
+//         if (
+//           item.gripeLevel === 2) {
+//             newList.push(item);
+//         }
+//       }
+// // make newList become gripePile
+//       this.setState({
+//         gripePile: newList,
+//       });
+//       console.log('this.state.gripePile', this.state.gripePile);
+//     });
+//   }
+
   render() {
     return (
       <div className="App">

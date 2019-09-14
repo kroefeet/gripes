@@ -4,11 +4,15 @@ import './Gripes.css';
 
 class Gripes extends Component {
   state = {
-    gripePile: [],
+    gripePile: [
+      {
+        gripeLevel: "",
+      },
+    ],
   }
 
   componentDidMount() {
-    this.fetchGripes();
+    this.fetchLightGripes();
   }
 
   fetchGripes() {
@@ -21,6 +25,50 @@ class Gripes extends Component {
           gripePile: data,
         });
       });
+  }
+
+  fetchHeavyGripes() {
+    fetch('/api/mongodb/gripePile/')
+    .then(response => response.json())
+    .then(data => {
+      console.log('Did component mount?', data);
+      // make a newList
+      // push the items in the newList
+      let newList = [];
+      for (let item of data) {
+        if (
+          item.gripeLevel === 2) {
+            newList.push(item);
+        }
+      }
+// make newList become gripePile
+      this.setState({
+        gripePile: newList,
+      });
+      console.log('Heavy Gripes only', this.state.gripePile);
+    });
+  }
+
+  fetchLightGripes() {
+    fetch('/api/mongodb/gripePile/')
+    .then(response => response.json())
+    .then(data => {
+      console.log('Did component mount?', data);
+      // make a newList
+      // push the items in the newList
+      let newList = [];
+      for (let item of data) {
+        if (
+          item.gripeLevel === 1) {
+            newList.push(item);
+        }
+      }
+// make newList become gripePile
+      this.setState({
+        gripePile: newList,
+      });
+      console.log('Light gripes only', this.state.gripePile);
+    });
   }
 /*
   deleteGripe(documentId) {
