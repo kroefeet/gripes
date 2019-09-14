@@ -18,6 +18,10 @@ class HeavyGripe extends Component {
     this.fetchHeavyGripes();
   }
 
+  randomIndex() {
+    return Math.floor(Math.random() * Math.floor(this.state.gripePile.length));
+  }
+
   fetchHeavyGripes() {
     fetch('/api/mongodb/gripePile/')
     .then(response => response.json())
@@ -42,25 +46,24 @@ class HeavyGripe extends Component {
 
 
   render() {
+    const currentGripe = this.state.gripePile[this.randomIndex()]
+
     return (
       <div className="Gripes">
-        <h1>This section could display an individual gripe</h1>
         {
-          this.state.gripePile.map((gripe, index) => (
-            <div className="Gripes-article" key={gripe._id}>
+          <div className="Gripes-article" key={this.state.gripePile._id}>
 
-              <p>{gripe.gripeText}</p>
+              <h1>{currentGripe.gripeText}</h1>
 
-              <div className="Gripes-articleActions">
-                <div onClick={() => this.deleteArticle(gripe._id)}>
+              {/* <div className="Gripes-articleActions">
+                <div onClick={() => this.deleteArticle(currentGripe._id)}>
                   <span alt="delete this">🗑</span>
                 </div>
-                <div onClick={() => this.voteArticle(gripe)}>
-                  <span alt="upvote this">⬆ {gripe.voteCount}</span>
+                <div onClick={() => this.voteArticle(currentGripe)}>
+                  <span alt="upvote this">⬆ {currentGripe.voteCount}</span>
                 </div>
-              </div>
+              </div> */}
             </div>
-          ))
         }
       </div>
     );

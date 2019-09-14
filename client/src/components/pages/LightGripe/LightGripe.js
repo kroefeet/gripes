@@ -15,17 +15,22 @@ class LightGripe extends Component {
     this.fetchLightGripes();
   }
 
+  randomIndex() {
+    return Math.floor(Math.random() * Math.floor(this.state.gripePile.length));
+  }
+
   fetchLightGripes() {
     fetch('/api/mongodb/gripePile/')
     .then(response => response.json())
     .then(data => {
       console.log('Did component mount?', data);
-      // make a newList
-      // push the items in the newList
+// make a newList
+// push the items in the newList
       let newList = [];
       for (let item of data) {
         if (
-          item.gripeLevel === 1) {
+          item.gripeLevel === 1
+          ) {
             newList.push(item);
         }
       }
@@ -39,27 +44,28 @@ class LightGripe extends Component {
 
 
   render() {
+    const currentGripe = this.state.gripePile[this.randomIndex()]
+
     return (
       <div className="Gripes">
-        <h1>This section could display an individual gripe</h1>
         {
-          this.state.gripePile.map((gripe, index) => (
-            <div className="Gripes-article" key={gripe._id}>
+            <div className="Gripes-article" key={this.state.gripePile._id}>
 
-              <p>{gripe.gripeText}</p>
+              <h1>{currentGripe.gripeText}</h1>
 
-              <div className="Gripes-articleActions">
-                <div onClick={() => this.deleteArticle(gripe._id)}>
+              {/* <div className="Gripes-articleActions">
+                <div onClick={() => this.deleteArticle(currentGripe)}>
                   <span alt="delete this">🗑</span>
                 </div>
-                <div onClick={() => this.voteArticle(gripe)}>
-                  <span alt="upvote this">⬆ {gripe.voteCount}</span>
+                <div onClick={() => this.voteArticle(currentGripe)}>
+                  <span alt="upvote this">⬆ {currentGripe.voteCount}</span>
                 </div>
-              </div>
+              </div> */}
             </div>
-          ))
+            
         }
       </div>
+      
     );
   }
 }
