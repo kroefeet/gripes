@@ -5,4 +5,9 @@
     background: linear-gradient(to top, black, orange);
     display: flex;
     flex-direction: column;
+    border-radius: 16px 16px 16px 16px;
+}
+
+.App-sideMenu p {
+    color: black;
 }

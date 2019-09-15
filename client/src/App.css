@@ -13,6 +13,7 @@
     padding: 10px;
     color: white;
     background: blue;
+    border-radius: 16px 16px 16px 16px;
 }
 
 .App-sidebar {
@@ -66,4 +67,7 @@
     grid-column: 1;
     grid-row: 1;
     background: green;
+    border-radius: 16px 16px 16px 16px;
+    display: flex;
+    align-items: center;
 }
