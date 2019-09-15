@@ -9,6 +9,7 @@ import HeavyGripe from './components/pages/HeavyGripe/HeavyGripe.js';
 import SubmitGripe from './components/pages/SubmitGripe/SubmitGripe.js';
 import SideMenu from './components/nav/SideMenu/SideMenu.js';
 
+
 class App extends Component {
 
   render() {
