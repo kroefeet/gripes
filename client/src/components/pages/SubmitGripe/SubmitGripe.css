@@ -1,6 +1,6 @@
-.WriteArticle input,
-.WriteArticle textarea,
-.WriteArticle button {
+.SubmitGripe input,
+.SubmitGripe textarea,
+.SubmitGripe button {
   font-size: 24pt;
   background: none;
   color: white;
@@ -10,7 +10,7 @@
   border: 2px solid white;
 }
 
-.WriteArticle button {
+.SubmitGripe button {
   color: black;
   background: #61dafb;
 }

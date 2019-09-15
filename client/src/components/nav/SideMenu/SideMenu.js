@@ -6,10 +6,11 @@ class SideMenu extends Component {
   render() {
     return (
       <div>
-          <p> This is the sideMenu component</p>
-          <Link to="/blog/">Heavy Gripes</Link>
-          <Link to="/">About</Link>
-          <Link to="/write/">Got a gripe?</Link>
+          <p>Gripe as you please!</p>
+          <Link to="/gripe/Heavy/">Heavy Gripes</Link><br></br>
+          <Link to="/gripe/Light/">Light Gripes</Link><br></br>
+          <Link to="/add-gripe/">Got a gripe?</Link><br></br>
+          <Link to="/">About</Link><br></br>
         </div>  
     )}
 }
