@@ -5,6 +5,7 @@ class SubmitGripe extends Component {
   state = {
     gripeLevel: 0,
     gripeText: '',
+    gripeLabel: '',
   }
 
   onChangeContent = (ev) => {
@@ -14,18 +15,25 @@ class SubmitGripe extends Component {
   }
 
   onChangeLevel = (ev) => {
+    const gripeLevel = parseInt(ev.target.value)
+    const gripeLabel = ev.target.id
     this.setState({
-      gripeLevel: ev.target.value,
+      gripeLevel: gripeLevel,
+      gripeLabel: gripeLabel,
     });
+    console.log(gripeLevel)
+    console.log(gripeLabel)
   }
 
   submit = () => {
     const formData = {
       gripeLevel: this.state.gripeLevel,
+      gripeLabel: this.state.gripeLabel,
       gripeText: this.state.gripeText,
+
     };
 
-    fetch('/api/mongodb/gripes.gripePile/', {
+    fetch('/api/mongodb/gripePile/', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(formData),
@@ -34,8 +42,8 @@ class SubmitGripe extends Component {
       .then(data => {
         console.log('Got this back', data);
 
-        // Redirect to blog
-        this.props.history.push('/blog/');
+        // Redirect to gripe
+        this.props.history.push('/');
       });
   }
 
@@ -44,29 +52,31 @@ class SubmitGripe extends Component {
     return (
       <div className="SubmitGripe">
         <h1>Add your gripe here</h1>
-        <input
-            name="category"
-            type="radio"
-            id="light"
-            value={this.state.gripeLevel}
-            onChange={this.onChangeLevel}
-          />  <label for="light">Light</label>
-      <input
-          name="category"
-          type="radio"
-          id="dark"
-          value={this.state.gripeLevel}
-          onChange={this.onChangeLevel}
-        />
-        <label for="dark">Dark</label>
+        <div className="SubmitGripe--inputs">
+            <input
+                name="category"
+                type="radio"
+                id="light"
+                value="1"
+                onClick={this.onChangeLevel}
+              />  <label>Light</label>
+          <input
+              name="category"
+              type="radio"
+              id="dark"
+              value="2"
+              onClick={this.onChangeLevel}
+            />
+            <label>Dark</label>
 
-        <input
-            name="category"
-            type="radio"
-            id="meta"
-            value={this.state.gripeLevel}
-            onChange={this.onChangeLevel}
-          />  <label for="meta">Website complaint</label>
+            <input
+                name="category"
+                type="radio"
+                id="meta"
+                value="0"
+                onClick={this.onChangeLevel}
+              />  <label>This website</label>
+            </div>
 
         <textarea
             name="content"
@@ -75,9 +85,7 @@ class SubmitGripe extends Component {
             onChange={this.onChangeContent}
           />
 
-        <br />
-
-        <button onClick={this.submit}>Add to the gripe pile</button>
+        <button className="SubmitGripe--button" onClick={this.submit}>Add to the gripe pile</button>
       </div>
 
     );
