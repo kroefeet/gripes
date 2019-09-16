@@ -6,6 +6,7 @@
   border: 2px solid #ed6a5e;
   border-radius: 8px;
   background: #f7ebe8;
+  color: #ed6a5e;
 }
 
 .SubmitGripe--button {
@@ -18,12 +19,14 @@
   width: auto;
   border-radius: 8px;
   border: 2px solid #ed6a5e;
+  transition: background .5s, color .5s
 
 }
 
 .SubmitGripe--button:hover {
     color: #ed6a5e;
     background: #f7ebe8;
+
 }
 
 .SubmitGripe--inputs {

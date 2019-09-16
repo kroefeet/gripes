@@ -43,7 +43,7 @@ class SubmitGripe extends Component {
         console.log('Got this back', data);
 
         // Redirect to gripe
-        this.props.history.push('/gripe/');
+        this.props.history.push('/');
       });
   }
 
