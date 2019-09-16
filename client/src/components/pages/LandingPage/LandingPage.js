@@ -7,11 +7,21 @@ class LandingPage extends Component {
     return (
       <div className="LandingPage">
         <header className="LandingPage-header">
+          <h2>You found a pile of gripes</h2>
+          <h3>Light Gripes</h3>
           <p>
-            This is the already created<br />
-            LandingPage component
+            This section is for those little annoyances in life. You might
+            not have experienced all of them, but they are familiar. These
+            are things that you would shake your fist at when it happens
+            to you but laugh a bit when it happens to someone else.
           </p>
-          <p>I was thinking that it could be that basis of the About page</p>
+          <h3>Heavy Gripes</h3>
+          <p>
+            These are the gripes that might make you feel bad about humanity,
+            life in general, your future and the future of your pets. These
+            are real gripes that have no easy solution but should be
+            acknowledged. Be warned.
+          </p>
         </header>
       </div>
     );

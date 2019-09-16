@@ -1,18 +1,24 @@
 .LandingPage {
   text-align: center;
+  border: 3px solid #ed6a5e;
+  border-radius: 8px;
 }
 
 .LandingPage-header {
-  background-color: #282c34;
+  background-color: #f7ebe8;
   min-height: 70vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #ed6a5e;
+  text-align: left;
+  padding: 10px;
 }
 
 .LandingPage a {
   color: #61dafb;
+}
+
+.LandingPage h2 {
+    text-align: center;
 }

@@ -43,7 +43,7 @@ class SubmitGripe extends Component {
         console.log('Got this back', data);
 
         // Redirect to gripe
-        this.props.history.push('/gripe/');
+        this.props.history.push('/');
       });
   }
 
@@ -84,8 +84,6 @@ class SubmitGripe extends Component {
             value={this.state.details}
             onChange={this.onChangeContent}
           />
-
-        <br />
 
         <button className="SubmitGripe--button" onClick={this.submit}>Add to the gripe pile</button>
       </div>
