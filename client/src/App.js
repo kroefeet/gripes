@@ -7,6 +7,8 @@ import LandingPage from './components/pages/LandingPage/LandingPage.js';
 import LightGripe from './components/pages/LightGripe/LightGripe.js';
 import HeavyGripe from './components/pages/HeavyGripe/HeavyGripe.js';
 import SubmitGripe from './components/pages/SubmitGripe/SubmitGripe.js';
+import SideMenu from './components/nav/SideMenu/SideMenu.js';
+
 
 class App extends Component {
 
@@ -19,11 +21,7 @@ class App extends Component {
         </nav>
 
         <div className="App-sideMenu">
-            <p> This is the sideMenu component</p>
-            <Link to="/gripe/Light/">Light Gripes</Link>
-            <Link to="/gripe/Heavy/">Heavy Gripes</Link>
-            <Link to="/">About</Link>
-            <Link to="/add-gripe/">Got a gripe?</Link>
+        <SideMenu />
         </div>
 
         <div className="App-mainContent">
