@@ -2,8 +2,10 @@
   font-size: 24pt;
   padding: 10px;
   margin: 5px;
-  width: 100%;
+  width: 98%;
   border: 2px solid #ed6a5e;
+  border-radius: 8px;
+  background: #f7ebe8;
 }
 
 .SubmitGripe--button {
@@ -13,23 +15,31 @@
   font-size: 24pt;
   padding: 10px;
   margin: 5px;
-  width: 100%;
+  width: auto;
+  border-radius: 8px;
+  border: 2px solid #ed6a5e;
 
 }
 
+.SubmitGripe--button:hover {
+    color: #ed6a5e;
+    background: #f7ebe8;
+}
 
 .SubmitGripe--inputs {
     display: flex;
     flex-wrap: nowrap;
-    align-items: flex-start;
     color: #ffa987;
     border-radius: 50%;
-    width: 16px;
-    height: 16px;
+
 
 }
 
 .SubmitGripe--inputs label {
     width: auto;
 
+}
+
+.SubmitGripe h1 {
+    color: #ffa987;
 }

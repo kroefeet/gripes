@@ -85,8 +85,6 @@ class SubmitGripe extends Component {
             onChange={this.onChangeContent}
           />
 
-        <br />
-
         <button className="SubmitGripe--button" onClick={this.submit}>Add to the gripe pile</button>
       </div>
 
