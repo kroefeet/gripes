@@ -1,0 +1,8 @@
+.App-sideMenu {
+    grid-column: 1;
+    grid-row: 2;
+    color: white;
+    background: linear-gradient(to top, black, orange);
+    display: flex;
+    flex-direction: column;
+}
