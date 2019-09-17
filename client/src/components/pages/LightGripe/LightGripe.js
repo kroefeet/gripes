@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './LightGripe.css';
+import { Link } from 'react-router-dom';
 
 
 class LightGripe extends Component {
@@ -53,14 +54,15 @@ class LightGripe extends Component {
 
               <h1>{currentGripe.gripeText}</h1>
 
-              {/* <div className="Gripes-articleActions">
-                <div onClick={() => this.deleteArticle(currentGripe)}>
-                  <span alt="delete this">🗑</span>
-                </div>
-                <div onClick={() => this.voteArticle(currentGripe)}>
+              <div className="Gripes-articleActions">
+                <Link to={'/gripe/Light/'}>More Gripes</Link>
+                {/* <button className="SubmitGripe--button" onClick={() => this.currentGripe}>
+                  More Gripes
+                </button> */}
+                {/* <div onClick={() => this.voteArticle(currentGripe)}>
                   <span alt="upvote this">⬆ {currentGripe.voteCount}</span>
-                </div>
-              </div> */}
+                </div> */}
+              </div>
             </div>
             
         }
