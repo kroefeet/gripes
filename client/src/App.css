@@ -12,14 +12,16 @@
 .App-navigation {
     padding: 10px;
     color: white;
-    background: blue;
+    background: #ED6A5E;
     border-radius: 16px 16px 16px 16px;
+    font-family: 'Abril Fatface', cursive;
 }
 
 .App-sidebar {
     background: rgba(255, 255, 255, 0.9);
     display: relative;
     padding: 10px;
+    font-family: 'Abril Fatface', cursive;
 }
 
 .App-sidebar img {
@@ -40,6 +42,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-family: 'Abril Fatface', cursive;
 }
 
 .App-navigation a {
@@ -52,6 +55,7 @@
 
 .App-mainContent {
     grid-column: 2;
+    font-family: 'Abril Fatface', cursive;
 }
 
 .App-sideMenu {
@@ -61,13 +65,15 @@
     background: linear-gradient(to top, black, orange);
     display: flex;
     flex-direction: column;
+    font-family: 'Abril Fatface', cursive;
 }
 
 .App-logo {
     grid-column: 1;
     grid-row: 1;
-    background: green;
+    background: #F7EBE8;
     border-radius: 16px 16px 16px 16px;
     display: flex;
     align-items: center;
+    font-family: 'Abril Fatface', cursive;
 }
