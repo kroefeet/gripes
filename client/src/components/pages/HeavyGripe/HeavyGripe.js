@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './HeavyGripe.css';
+import { Link } from 'react-router-dom';  
 
 // TODO: checkbox for light/heavy gripes on WriteArticle
 //      - Try one gripe w/ light/heavy variables
@@ -55,14 +56,15 @@ class HeavyGripe extends Component {
 
               <h1>{currentGripe.gripeText}</h1>
 
-              {/* <div className="Gripes-articleActions">
-                <div onClick={() => this.deleteArticle(currentGripe._id)}>
-                  <span alt="delete this">🗑</span>
-                </div>
-                <div onClick={() => this.voteArticle(currentGripe)}>
+              <div className="Gripes-articleActions">
+                <Link to={'/gripe/Heavy/'}>More Gripes</Link>
+                {/* <button className="SubmitGripe--button" onClick={() => this.currentGripe}>
+                  More Gripes
+                </button> */}
+                {/* <div onClick={() => this.voteArticle(currentGripe)}>
                   <span alt="upvote this">⬆ {currentGripe.voteCount}</span>
-                </div>
-              </div> */}
+                </div> */}
+              </div>
             </div>
         }
       </div>

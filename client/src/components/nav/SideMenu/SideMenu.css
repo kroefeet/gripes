@@ -1,8 +1,33 @@
 .App-sideMenu {
     grid-column: 1;
     grid-row: 2;
-    color: white;
-    background: linear-gradient(to top, black, orange);
+    color: white;                                                                                               
+    background: linear-gradient(to top,white, #FFA987);
     display: flex;
     flex-direction: column;
+    font-family: 'Abril Fatface', cursive;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+}
+
+.Style {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.App-sideMenu p {
+    color: black;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-evenly;
+    color: white;
+    font-size: large;
+    
 }

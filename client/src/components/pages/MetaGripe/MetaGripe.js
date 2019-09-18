@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import './LightGripe.css';
-import { Link } from 'react-router-dom';
+import './MetaGripe.css';
+import { Link } from 'react-router-dom';  
 
-
-class LightGripe extends Component {
+class MetaGripe extends Component {
   state = {
     gripePile: [
       {
@@ -13,33 +12,29 @@ class LightGripe extends Component {
   }
 
   componentDidMount() {
-    this.fetchLightGripes();
+    this.fetchMetaGripes();
   }
 
   randomIndex() {
     return Math.floor(Math.random() * Math.floor(this.state.gripePile.length));
   }
 
-  fetchLightGripes() {
+  fetchMetaGripes() {
     fetch('/api/mongodb/gripePile/')
     .then(response => response.json())
     .then(data => {
       console.log('Did component mount?', data);
-// make a newList
-// push the items in the newList
       let newList = [];
       for (let item of data) {
         if (
-          item.gripeLevel === 1
-          ) {
+          item.gripeLevel === 0) {
             newList.push(item);
         }
       }
-// make newList become gripePile
       this.setState({
         gripePile: newList,
       });
-      console.log('Light gripes only', this.state.gripePile);
+      console.log('Meta gripes only', this.state.gripePile);
     });
   }
 
@@ -50,12 +45,12 @@ class LightGripe extends Component {
     return (
       <div className="Gripes">
         {
-            <div className="Gripes-article" key={this.state.gripePile._id}>
+          <div className="Gripes-article" key={this.state.gripePile._id}>
 
               <h1>{currentGripe.gripeText}</h1>
 
               <div className="Gripes-articleActions">
-                <Link to={'/gripe/Light/'}>More Gripes</Link>
+                <Link to={'/gripe/Meta/'}>More Gripes</Link>
                 {/* <button className="SubmitGripe--button" onClick={() => this.currentGripe}>
                   More Gripes
                 </button> */}
@@ -64,12 +59,10 @@ class LightGripe extends Component {
                 </div> */}
               </div>
             </div>
-            
         }
       </div>
-      
     );
   }
 }
 
-export default LightGripe;
+export default MetaGripe;

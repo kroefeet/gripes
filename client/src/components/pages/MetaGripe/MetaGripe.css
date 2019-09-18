@@ -1,14 +1,14 @@
-.LightGripe {
+.MetaGripe {
 }
 
-.LightGripe-article {
-  background: #444140;
+.MetaGripe-article {
+  background: #1E1E24;
   padding: 10px;
   margin: 10px;
   position: relative;
 }
 
-.LightGripe-articleActions > div {
+.MetaGripe-articleActions > div {
   display: inline-block;
   position: absolute;
   top: 10px;
@@ -16,11 +16,11 @@
   user-select: none;
 }
 
-.LightGripe-articleActions > div:first-child {
+.MetaGripe-articleActions > div:first-child {
   right: 10px;
 }
 
-.LightGripe-articleActions > div:last-child {
+.MetaGripe-articleActions > div:last-child {
   left: 10px;
 }
 
