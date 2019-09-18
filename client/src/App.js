@@ -6,6 +6,7 @@ import './App.css';
 import LandingPage from './components/pages/LandingPage/LandingPage.js';
 import LightGripe from './components/pages/LightGripe/LightGripe.js';
 import HeavyGripe from './components/pages/HeavyGripe/HeavyGripe.js';
+import MetaGripe from './components/pages/MetaGripe/MetaGripe.js';
 import SubmitGripe from './components/pages/SubmitGripe/SubmitGripe.js';
 import SideMenu from './components/nav/SideMenu/SideMenu.js';
 
@@ -30,6 +31,7 @@ class App extends Component {
             <Route exact path='/gripe/Light/' component={LightGripe} />
             <Route exact path='/gripe/Heavy/' component={HeavyGripe} />
             <Route exact path='/add-gripe/' component={SubmitGripe} />
+            <Route exact path='/gripe/Meta/' component={MetaGripe} />
           </Switch>
         </div>
 
