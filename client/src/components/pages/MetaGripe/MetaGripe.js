@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import './HeavyGripe.css';
+import './MetaGripe.css';
 import { Link } from 'react-router-dom';  
 
-// TODO: checkbox for light/heavy gripes on WriteArticle
-//      - Try one gripe w/ light/heavy variables
-//        - From API, filter Light and Heavy gripes
-//        - then randomize each category when displaying on app
-class HeavyGripe extends Component {
+class MetaGripe extends Component {
   state = {
     gripePile: [
       {
@@ -16,32 +12,29 @@ class HeavyGripe extends Component {
   }
 
   componentDidMount() {
-    this.fetchHeavyGripes();
+    this.fetchMetaGripes();
   }
 
   randomIndex() {
     return Math.floor(Math.random() * Math.floor(this.state.gripePile.length));
   }
 
-  fetchHeavyGripes() {
+  fetchMetaGripes() {
     fetch('/api/mongodb/gripePile/')
     .then(response => response.json())
     .then(data => {
       console.log('Did component mount?', data);
-      // make a newList
-      // push the items in the newList
       let newList = [];
       for (let item of data) {
         if (
-          item.gripeLevel === 2) {
+          item.gripeLevel === 0) {
             newList.push(item);
         }
       }
-// make newList become gripePile
       this.setState({
         gripePile: newList,
       });
-      console.log('Heavy gripes only', this.state.gripePile);
+      console.log('Meta gripes only', this.state.gripePile);
     });
   }
 
@@ -57,7 +50,7 @@ class HeavyGripe extends Component {
               <h1>{currentGripe.gripeText}</h1>
 
               <div className="Gripes-articleActions">
-                <Link to={'/gripe/Heavy/'}>More Gripes</Link>
+                <Link to={'/gripe/Meta/'}>More Gripes</Link>
                 {/* <button className="SubmitGripe--button" onClick={() => this.currentGripe}>
                   More Gripes
                 </button> */}
@@ -72,4 +65,4 @@ class HeavyGripe extends Component {
   }
 }
 
-export default HeavyGripe;
+export default MetaGripe;

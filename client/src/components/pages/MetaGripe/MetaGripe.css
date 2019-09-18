@@ -1,0 +1,27 @@
+.MetaGripe {
+}
+
+.MetaGripe-article {
+  background: #1E1E24;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+}
+
+.MetaGripe-articleActions > div {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.MetaGripe-articleActions > div:first-child {
+  right: 10px;
+}
+
+.MetaGripe-articleActions > div:last-child {
+  left: 10px;
+}
+
+
