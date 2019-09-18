@@ -8,6 +8,7 @@ import LightGripe from './components/pages/LightGripe/LightGripe.js';
 import HeavyGripe from './components/pages/HeavyGripe/HeavyGripe.js';
 import SubmitGripe from './components/pages/SubmitGripe/SubmitGripe.js';
 import SideMenu from './components/nav/SideMenu/SideMenu.js';
+import logo from './components/nav/logo/Gripe_logo.png';
 
 
 class App extends Component {
@@ -17,7 +18,7 @@ class App extends Component {
       <div className="App">
         <div className="App-logo">logo placeholder</div>
         <nav className="App-navigation">
-          <h1 className="App-title">Gripes</h1>
+          <h1 className="App-title">Gripes <img src={logo}></img>  </h1>
         </nav>
 
         <div className="App-sideMenu">
