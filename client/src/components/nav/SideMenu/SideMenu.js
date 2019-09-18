@@ -5,7 +5,7 @@ import './SideMenu.css';
 class SideMenu extends Component {
   render() {
     return (
-      <div>
+      <div className="Style">
           <p>Gripe as you please!</p>
           <Link to="/gripe/Heavy/">Heavy Gripes</Link><br></br>
           <Link to="/gripe/Light/">Light Gripes</Link><br></br>
