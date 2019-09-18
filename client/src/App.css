@@ -2,10 +2,10 @@
     background: linear-gradient(to top, #fff, #000);
     min-height: 100vh;
     display: grid;
-    grid-template-columns: minmax(100px, 200px) 1fr minmax(100px, 200px);
+    grid-template-columns: minmax(100px, 200px) 1fr;
     grid-template-rows: 100px auto;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
+    /* grid-row-gap: 10px;
+    grid-column-gap: 10px; */
     align-items: stretch;
 }
 
@@ -13,7 +13,7 @@
     padding: 10px;
     color: white;
     background: #ED6A5E;
-    border-radius: 16px 16px 16px 16px;
+    /* border-radius: 16px 16px 16px 16px; */
     font-family: 'Abril Fatface', cursive;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .App-navigation h1 {
-    font-size: 36pt;
+    font-size: 80pt;
 }
 
 .Article-title {
@@ -71,8 +71,8 @@
 .App-logo {
     grid-column: 1;
     grid-row: 1;
-    background: #F7EBE8;
-    border-radius: 16px 16px 16px 16px;
+    background: #FFA987;
+    /* border-radius: 16px 16px 16px 16px; */
     display: flex;
     align-items: center;
     font-family: 'Abril Fatface', cursive;
