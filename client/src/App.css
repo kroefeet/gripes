@@ -1,5 +1,5 @@
 .App {
-    background: linear-gradient(to top, #fff, #000);
+    background: whitesmoke;
     min-height: 100vh;
     display: grid;
     grid-template-columns: minmax(100px, 200px) 1fr;
@@ -11,8 +11,8 @@
 
 .App-navigation {
     padding: 10px;
-    color: white;
-    background: #ED6A5E;
+    color: #444140;
+    background: whitesmoke;
     /* border-radius: 16px 16px 16px 16px; */
     font-family: 'Abril Fatface', cursive;
 }
@@ -37,6 +37,7 @@
 }
 
 .App-navigation {
+    z-index: 1;
     grid-column: 2 / span 1;
     display: flex;
     justify-content: center;
@@ -62,7 +63,7 @@
 .App-logo {
     grid-column: 1;
     grid-row: 1;
-    background: #FFA987;
+    background: #444140;
     /* border-radius: 16px 16px 16px 16px; */
     display: flex;
     align-items: center;
@@ -70,6 +71,6 @@
 }
 
 .App-title img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
 }
