@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './MetaGripe.css';
 import { Link } from 'react-router-dom';  
 
 class MetaGripe extends Component {
@@ -45,12 +44,14 @@ class MetaGripe extends Component {
     return (
       <div className="Gripes">
         {
-          <div className="Gripes-article" key={this.state.gripePile._id}>
+          <div key={this.state.gripePile._id}>
 
-              <h1>{currentGripe.gripeText}</h1>
+              <h1 className="Gripe-window-text-size">"{currentGripe.gripeText}"</h1>
 
-              <div className="Gripes-articleActions">
-                <Link to={'/gripe/Meta/'}>More Gripes</Link>
+              <div>
+
+                <Link className="Gripe-window-submit--button" to={'/gripe/Meta/'}>Another Gripe...</Link>
+
                 {/* <button className="SubmitGripe--button" onClick={() => this.currentGripe}>
                   More Gripes
                 </button> */}
