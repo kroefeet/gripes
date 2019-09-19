@@ -9,7 +9,7 @@ import HeavyGripe from './components/pages/HeavyGripe/HeavyGripe.js';
 import MetaGripe from './components/pages/MetaGripe/MetaGripe.js';
 import SubmitGripe from './components/pages/SubmitGripe/SubmitGripe.js';
 import SideMenu from './components/nav/SideMenu/SideMenu.js';
-import logo from './components/nav/logo/Gripe_logo.png';
+import logo from './components/nav/logo/Gripe_logo_dark.png';
 
 
 class App extends Component {
