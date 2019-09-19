@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-logo">logo placeholder</div>
+        <div className="App-logo"></div>
         <nav className="App-navigation">
           <h1 className="App-title">Gripes <img src={logo}></img>  </h1>
         </nav>
