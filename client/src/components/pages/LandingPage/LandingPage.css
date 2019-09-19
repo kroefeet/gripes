@@ -16,7 +16,10 @@
 }
 
 .LandingPage a {
-  color: #61dafb;
+  color: #ed6a5e;
+  font-size: 1.5em;
+  text-decoration: underline;
+
 }
 
 .LandingPage h2 {

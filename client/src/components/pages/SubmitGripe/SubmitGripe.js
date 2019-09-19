@@ -4,14 +4,16 @@ import './SubmitGripe.css';
 class SubmitGripe extends Component {
   state = {
     gripeLevel: 0,
-    gripeText: '',
     gripeLabel: '',
+    gripeText: '',
+
   }
 
   onChangeContent = (ev) => {
     this.setState({
       gripeText: ev.target.value,
     });
+    //console.log(ev.target.value)
   }
 
   onChangeLevel = (ev) => {
@@ -21,8 +23,8 @@ class SubmitGripe extends Component {
       gripeLevel: gripeLevel,
       gripeLabel: gripeLabel,
     });
-    console.log(gripeLevel)
-    console.log(gripeLabel)
+    //console.log(gripeLevel)
+    //console.log(gripeLabel)
   }
 
   submit = () => {
