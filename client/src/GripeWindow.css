@@ -1,0 +1,24 @@
+.Gripe-window-text-size {
+  font-size: 5em;
+  color: #444140;
+  text-align: center;
+  padding: 1em;
+}
+.Gripe-window-submit--button {
+  color: #f7ebe8;
+  background: #ed6a5e;
+  text-align: center;
+  font-size: 24pt;
+  padding: 10px;
+  margin: auto;
+  width: 240px;
+  border-radius: 8px;
+  border: 2px solid #ed6a5e;
+  transition: background .5s, color .5s
+}
+
+.Gripe-window-submit--button:hover {
+    color: #ed6a5e;
+    background: #f7ebe8;
+
+}

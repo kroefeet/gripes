@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, Switch, Route } from 'react-router-dom'
 
 import './App.css';
+import './GripeWindow.css';
 
 import LandingPage from './components/pages/LandingPage/LandingPage.js';
 import LightGripe from './components/pages/LightGripe/LightGripe.js';

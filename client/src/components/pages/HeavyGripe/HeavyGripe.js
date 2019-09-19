@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './HeavyGripe.css';
 import { Link } from 'react-router-dom';  
 
 // TODO: checkbox for light/heavy gripes on WriteArticle
@@ -52,12 +51,14 @@ class HeavyGripe extends Component {
     return (
       <div className="Gripes">
         {
-          <div className="Gripes-article" key={this.state.gripePile._id}>
+          <div key={this.state.gripePile._id}>
 
-              <h1>{currentGripe.gripeText}</h1>
+              <h1 className="Gripe-window-text-size">"{currentGripe.gripeText}"</h1>
 
-              <div className="Gripes-articleActions">
-                <Link to={'/gripe/Heavy/'}>More Gripes</Link>
+              <div>
+
+                <Link className="Gripe-window-submit--button" to={'/gripe/Heavy/'}>Another Gripe...</Link>
+
                 {/* <button className="SubmitGripe--button" onClick={() => this.currentGripe}>
                   More Gripes
                 </button> */}
