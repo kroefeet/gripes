@@ -4,7 +4,7 @@ import './SubmitGripe.css';
 class SubmitGripe extends Component {
   state = {
     gripeLevel: 0,
-    gripeLabel: '',
+    gripeLabel: 'needs Attention',
     gripeText: '',
 
   }
@@ -85,6 +85,7 @@ class SubmitGripe extends Component {
             placeholder="Contents"
             value={this.state.details}
             onChange={this.onChangeContent}
+            required
           />
 
         <button className="SubmitGripe--button" onClick={this.submit}>Add to the gripe pile</button>
