@@ -2,7 +2,9 @@
   font-size: 5em;
   color: #444140;
   text-align: center;
-  padding: 1em;
+  padding: 0.5em;
+  height: 6em;
+  overflow-x: hidden;
 }
 .Gripe-window-submit--button {
   color: #f7ebe8;
