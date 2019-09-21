@@ -49,13 +49,13 @@ class LightGripe extends Component {
     return (
       <div className="Gripes">
         {
-            <div key={this.state.gripePile._id}>
-
+          <div key={this.state.gripePile._id}>
+            <div>
               <h1 className="Gripe-window-text-size">"{currentGripe.gripeText}"</h1>
+            </div>
 
-              <div>
-
-                <Link className="Gripe-window-submit--button" to={'/gripe/Light/'}>Another Gripe...</Link>
+            <div>
+              <Link className="Gripe-window-submit--button" to={'/gripe/Light/'}>Another Gripe...</Link>
                 
                 {/* <button className="SubmitGripe--button" onClick={() => this.currentGripe}>
                   More Gripes
@@ -64,11 +64,9 @@ class LightGripe extends Component {
                   <span alt="upvote this">⬆ {currentGripe.voteCount}</span>
                 </div> */}
               </div>
-            </div>
-            
+          </div>
         }
-      </div>
-      
+      </div>     
     );
   }
 }
