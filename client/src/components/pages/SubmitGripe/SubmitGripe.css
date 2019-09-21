@@ -1,38 +1,50 @@
+:root {
+    --lighter-color: #f7ebe8;
+    --darker-color: #ed6a5e;
+}
+
+
+.SubmitGripe {
+    padding-left: 20px;
+    padding-top: 30px;
+    color: var(--darker-color);
+}
+
 .SubmitGripe textarea {
   font-size: 24pt;
   padding: 10px;
   margin: 5px;
   width: 80%;
-  border: 2px solid #ed6a5e;
+  border: 2px solid var(--darker-color);
   border-radius: 8px;
-  background: #f7ebe8;
-  color: #ed6a5e;
+  background: var(--lighter-color);
+  color: var(--darker-color);
 }
 
 .SubmitGripe--button {
-  color: #f7ebe8;
-  background: #ed6a5e;
+  color: var(--lighter-color);
+  background: var(--darker-color);
   text-align: center;
   font-size: 24pt;
-  padding: 10px;
+  padding: 20px;
   margin: 5px;
   width: auto;
   border-radius: 8px;
-  border: 2px solid #ed6a5e;
+  border: 2px solid var(--darker-color);
   transition: background .5s, color .5s
 
 }
 
 .SubmitGripe--button:hover {
-    color: #ed6a5e;
-    background: #f7ebe8;
+    color: var(--darker-color);
+    background: var(--lighter-color);
 
 }
 
 .SubmitGripe--inputs {
     display: flex;
     flex-wrap: nowrap;
-    color: #ffa987;
+    color: var(--darker-color);
     border-radius: 50%;
 
 
@@ -40,9 +52,8 @@
 
 .SubmitGripe--inputs label {
     width: auto;
-
 }
 
 .SubmitGripe h1 {
-    color: #ffa987;
+    color: var(--darker-color);
 }
