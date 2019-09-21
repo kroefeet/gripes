@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import './HeavyGripe.css';
 import { Link } from 'react-router-dom';  
 
-// TODO: checkbox for light/heavy gripes on WriteArticle
-//      - Try one gripe w/ light/heavy variables
-//        - From API, filter Light and Heavy gripes
-//        - then randomize each category when displaying on app
 class HeavyGripe extends Component {
   state = {
     gripePile: [
@@ -52,21 +47,23 @@ class HeavyGripe extends Component {
     return (
       <div className="Gripes">
         {
-          <div className="Gripes-article" key={this.state.gripePile._id}>
-
-              <h1>{currentGripe.gripeText}</h1>
-
-              <div className="Gripes-articleActions">
-                <Link to={'/gripe/Heavy/'}>More Gripes</Link>
-                {/* <button className="SubmitGripe--button" onClick={() => this.currentGripe}>
-                  More Gripes
-                </button> */}
-                {/* <div onClick={() => this.voteArticle(currentGripe)}>
-                  <span alt="upvote this">⬆ {currentGripe.voteCount}</span>
-                </div> */}
-              </div>
+          <div key={this.state.gripePile._id}>
+            <div>
+              <h1 className="Gripe-window-text-size">"{currentGripe.gripeText}"</h1>
             </div>
-        }
+
+            <div>
+              <Link className="Gripe-window-submit--button" to={'/gripe/Heavy/'}>Another Gripe...</Link>
+
+              {/* <button className="SubmitGripe--button" onClick={() => this.currentGripe}>
+                More Gripes
+              </button> */}
+              {/* <div onClick={() => this.voteArticle(currentGripe)}>
+                <span alt="upvote this">⬆ {currentGripe.voteCount}</span>
+              </div> */}
+            </div>
+          </div>
+          }
       </div>
     );
   }

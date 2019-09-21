@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, Switch, Route } from 'react-router-dom'
 
 import './App.css';
+import './GripeWindow.css';
 
 import LandingPage from './components/pages/LandingPage/LandingPage.js';
 import LightGripe from './components/pages/LightGripe/LightGripe.js';
@@ -9,7 +10,7 @@ import HeavyGripe from './components/pages/HeavyGripe/HeavyGripe.js';
 import MetaGripe from './components/pages/MetaGripe/MetaGripe.js';
 import SubmitGripe from './components/pages/SubmitGripe/SubmitGripe.js';
 import SideMenu from './components/nav/SideMenu/SideMenu.js';
-import logo from './components/nav/logo/Gripe_logo.png';
+import logo from './components/nav/logo/Gripe_logo_dark.png';
 
 
 class App extends Component {
@@ -17,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-logo">logo placeholder</div>
+        <div className="App-logo"></div>
         <nav className="App-navigation">
           <h1 className="App-title">Gripes <img src={logo}></img>  </h1>
         </nav>

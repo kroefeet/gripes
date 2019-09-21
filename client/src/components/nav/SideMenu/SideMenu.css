@@ -1,8 +1,8 @@
 .App-sideMenu {
     grid-column: 1;
     grid-row: 2;
-    color: white;                                                                                               
-    background: linear-gradient(to top,white, #FFA987);
+    color: white;
+    background: #444140;
     display: flex;
     flex-direction: column;
     font-family: 'Abril Fatface', cursive;
@@ -29,5 +29,5 @@ a {
     justify-content: space-evenly;
     color: white;
     font-size: large;
-    
+
 }

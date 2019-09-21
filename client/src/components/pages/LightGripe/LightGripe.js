@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './LightGripe.css';
 import { Link } from 'react-router-dom';
+
+import './LightGripe.css';
 
 
 class LightGripe extends Component {
@@ -50,12 +51,14 @@ class LightGripe extends Component {
     return (
       <div className="Gripes">
         {
-            <div className="Gripes-article" key={this.state.gripePile._id}>
+          <div key={this.state.gripePile._id}>
+            <div>
+              <h1 className="LightGripe-window-text-size">"{currentGripe.gripeText}"</h1>
+            </div>
 
-              <h1>{currentGripe.gripeText}</h1>
-
-              <div className="Gripes-articleActions">
-                <Link to={'/gripe/Light/'}>More Gripes</Link>
+            <div>
+              <Link className="LightGripe-window-submit--button" to={'/gripe/Light/'}>Another Gripe...</Link>
+                
                 {/* <button className="SubmitGripe--button" onClick={() => this.currentGripe}>
                   More Gripes
                 </button> */}
@@ -63,11 +66,9 @@ class LightGripe extends Component {
                   <span alt="upvote this">⬆ {currentGripe.voteCount}</span>
                 </div> */}
               </div>
-            </div>
-            
+          </div>
         }
-      </div>
-      
+      </div>     
     );
   }
 }

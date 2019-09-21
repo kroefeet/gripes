@@ -1,26 +1,26 @@
-.LightGripe-window-text-size {
+.Gripe-window-text-size {
   font-size: 5em;
-  color: #ED6A5E;
+  color: #444140;
   text-align: center;
   padding: 0.5em;
   height: 6em;
   overflow-x: hidden;
 }
-.LightGripe-window-submit--button {
+.Gripe-window-submit--button {
   color: #f7ebe8;
-  background: #444140;
+  background: #ed6a5e;
   text-align: center;
   font-size: 24pt;
   padding: 10px;
   margin: auto;
   width: 240px;
   border-radius: 8px;
-  border: 2px solid #444140;
+  border: 2px solid #ed6a5e;
   transition: background .5s, color .5s
 }
 
-.LightGripe-window-submit--button:hover {
-    color: #444140;
+.Gripe-window-submit--button:hover {
+    color: #ed6a5e;
     background: #f7ebe8;
 
 }
