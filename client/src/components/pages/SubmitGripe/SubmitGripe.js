@@ -13,7 +13,7 @@ class SubmitGripe extends Component {
     this.setState({
       gripeText: ev.target.value,
     });
-    //console.log(ev.target.value)
+
   }
 
   onChangeLevel = (ev) => {
@@ -23,37 +23,41 @@ class SubmitGripe extends Component {
       gripeLevel: gripeLevel,
       gripeLabel: gripeLabel,
     });
-    //console.log(gripeLevel)
-    //console.log(gripeLabel)
+
   }
 
   submit = () => {
-    const formData = {
-      gripeLevel: this.state.gripeLevel,
-      gripeLabel: this.state.gripeLabel,
-      gripeText: this.state.gripeText,
+    if (this.state.gripeText !== ''){
+        const formData = {
+          gripeLevel: this.state.gripeLevel,
+          gripeLabel: this.state.gripeLabel,
+          gripeText: this.state.gripeText,
 
-    };
+        };
 
-    fetch('/api/mongodb/gripePile/', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(formData),
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Got this back', data);
+        fetch('/api/mongodb/gripePile/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(formData),
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log('Got this back', data);
 
-        // Redirect to gripe
-        this.props.history.push('/');
-      });
-  }
+            // Redirect to gripe
+            this.props.history.push('/');
+          });
+
+      }else{
+          alert("You must include text to gripe in this community")
+      }
+    }
 
 
   render() {
     return (
       <div className="SubmitGripe">
-        <h1>Add your gripe here</h1>
+        
         <div className="SubmitGripe--inputs">
             <input
                 name="category"
@@ -82,7 +86,7 @@ class SubmitGripe extends Component {
 
         <textarea
             name="content"
-            placeholder="Contents"
+            placeholder="Start griping here (required)"
             value={this.state.details}
             onChange={this.onChangeContent}
             required
