@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';  
+import { Link } from 'react-router-dom';
+
+const meowNames = require('meow-names');
 
 class MetaGripe extends Component {
   state = {
@@ -47,8 +49,9 @@ class MetaGripe extends Component {
           <div key={this.state.gripePile._id}>
             <div>
               <h1 className="Gripe-window-text-size">"{currentGripe.gripeText}"</h1>
+              <p>{meowNames.random()}</p>
             </div>
-            
+
             <div>
               <Link className="Gripe-window-submit--button" to={'/gripe/Meta/'}>Another Gripe...</Link>
 
