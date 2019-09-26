@@ -1,5 +1,4 @@
 # A Pile of Gripes
-# A Pile of Gripes
 
 This project is a MERN project. That's right - we are using Mongo, Express, React, and Node
 
